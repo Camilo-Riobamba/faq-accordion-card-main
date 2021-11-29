@@ -1,0 +1,24 @@
+// width
+@for $i from 1 through 10 {
+    .w-#{$i * 10} {
+        width: #{$i * 10%};
+    }
+}
+
+.h-min{
+    min-height: 100vh;
+}
+
+@each $value in $list_breakpoints{
+    @include breakpoint(min, $value){
+        @for $i from 1 through 10{
+            .w-#{$i * 10}-#{$value}{
+                width: #{$i * 10%};
+            }
+        }
+    }
+
+    .h-min-#{$value}{
+        min-height: 100vh;
+    }
+}

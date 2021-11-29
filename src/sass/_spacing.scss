@@ -1,0 +1,54 @@
+@use "sass:list";
+
+//padding
+$spacing: 0rem, 0.5rem, 1rem, 2rem, 3rem;
+$positions: (
+    "": "",
+    t: -top,
+    r: -right,
+    b: -bottom,
+    l: -left
+);
+
+@mixin spacing($property: "", $value, $modifier: ""){
+    .p#{$modifier}{
+        padding#{$property}: $value;
+    }
+
+    .m#{$modifier}{
+        margin#{$property}: $value;
+    }
+}
+
+@mixin spacing-position($media: ""){
+    @each $position, $property in $positions {
+        @for $i from 0 through list.length($spacing) - 1 {
+            @include spacing(
+                // position
+                $property,
+
+                // value
+                list.nth($spacing, $i + 1),
+
+                // (poroperty)(position)-(value)-(breakpoint)
+                #{$position}-#{$i}#{$media}
+            );
+        }
+    }
+}
+
+@include spacing-position();
+
+.m-auto{
+    margin: 0 auto;
+}
+
+@each $media in $list_breakpoints{
+    @include breakpoint(min, $media){
+        @include spacing-position(-#{$media});
+    }
+
+    .m-auto-#{$media}{
+        margin: 0 auto;
+    }
+}

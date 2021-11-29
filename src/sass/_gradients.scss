@@ -1,0 +1,6 @@
+@mixin linear-gradient($direction, $from, $to){
+    background: linear-gradient($direction ,$from, $to);
+    background: -webkit-linear-gradient($direction ,$from, $to);
+    background: -moz-linear-gradient($direction ,$from, $to);
+    background: -o-linear-gradient($direction ,$from, $to);
+}

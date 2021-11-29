@@ -1,0 +1,42 @@
+.text-center {
+    text-align: center !important;
+}
+
+.text-left{
+    text-align: left !important;
+}
+
+.text-right{
+    text-align: right !important;
+}
+
+.bold{
+    font-weight: bold !important;
+}
+
+.bolder{
+    font-weight: bolder !important;
+}
+
+.light{
+    font-weight: lighter !important;
+}
+
+.normal{
+    font-weight: normal !important;
+}
+
+@include breakpoint(min, md){
+    .text-left-md{
+        text-align: left !important;
+    }
+
+    .text-right-md{
+        text-align: right !important;
+    }
+}
+
+// color
+.text-light{
+    color: #fff;
+}

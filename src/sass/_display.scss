@@ -1,0 +1,28 @@
+// displays
+.d-block {
+    display: block !important;
+}
+
+.d-inline-block {
+    display: inline-block !important;
+}
+
+.d-none {
+    display: none !important;
+}
+
+@each $media in $list-breakpoints{
+    @include breakpoint(min, $media){
+        .d-block-#{$media} {
+            display: block !important;
+        }
+        
+        .d-inline-block-#{$media} {
+            display: inline-block !important;
+        }
+        
+        .d-none-#{$media} {
+            display: none !important;
+        }
+    }
+}

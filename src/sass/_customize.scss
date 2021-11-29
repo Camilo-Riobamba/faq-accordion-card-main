@@ -1,0 +1,24 @@
+@font-face {
+    font-family: "Kumbh Sans";
+    src: url("../fonts/KumbhSans-VariableFont_wght.ttf");
+}
+
+$font-family: "Kumbh Sans";
+$font-size: 12px;
+
+// colors
+$text: (
+    "Very dark desaturated blue": hsl(238, 29%, 16%),
+    "Soft red": hsl(14, 88%, 65%)
+);
+
+$text-neutral: (
+    "Very dark grayish blue": hsl(237, 12%, 33%),
+    "Dark grayish blue": hsl(240, 6%, 50%)
+);
+
+$divider: hsl(240, 5%, 91%);
+
+.background{
+    @include linear-gradient(to bottom, hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+}

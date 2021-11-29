@@ -1,0 +1,15 @@
+//fonts
+$font-size: 16px;
+$font-family: Open sans;
+
+//breakpoints
+$list_breakpoints: xs, sm, md, lg, xl, xxl;
+
+$breakpoints: (
+	xs: 0,
+	sm: 576px,
+	md: 768px,
+	lg: 992px,
+	xl: 1200px,
+	xxl: 1400px,
+);
