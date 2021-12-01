@@ -8,6 +8,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 //styles
+import 'normalize.css';
 import './sass/main.scss';
 
 ReactDOM.render(
