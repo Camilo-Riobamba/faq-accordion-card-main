@@ -30,8 +30,8 @@ export default class Dropdown extends React.Component{
                         {
                             this.state.active ?
 
-                            <img src={arrowDown} alt="arrow down"/> :
-                            <img src={arrowDown} alt="arrow down" className="rotate-180"/>
+                            <img src={arrowDown} alt="arrow down" className="rotate-180"/> :
+                            <img src={arrowDown} alt="arrow down"/>
                         }
                     </span>
                 </div>
