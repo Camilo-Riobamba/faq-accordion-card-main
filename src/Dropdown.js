@@ -4,19 +4,39 @@ import React from "react";
 import arrowDown from './images/icon-arrow-down.svg';
 
 export default class Dropdown extends React.Component{
+    constructor(props){
+        super(props);
+        this.state = {
+            active: false
+        }
+
+        this.toggleDropdown = this.toggleDropdown.bind(this);
+    }
+
+    toggleDropdown(){
+        this.setState((prevState) => ({
+            active: !prevState.active
+        }))
+    }
+
     render(){
         return (
-            <div>
-                <div>
+            <div className="border pt-2 pb-2 text-very-dark-grayish-blue">
+                <div className="container space-between" onClick={this.toggleDropdown}>
                     <span>
-                        <h3>{this.props.title}</h3>
+                        <h3 className={ `m-0 ${this.state.active ? "bold" : "text-dark normal"}` }>{this.props.title}</h3>
                     </span>
                     <span>
-                        <img src={arrowDown} alt="arrow down"/>
+                        {
+                            this.state.active ?
+
+                            <img src={arrowDown} alt="arrow down"/> :
+                            <img src={arrowDown} alt="arrow down" className="rotate-180"/>
+                        }
                     </span>
                 </div>
-                <div>
-                    <p>
+                <div className={ this.state.active ? "d-block" : "d-none" }>
+                    <p className="text-dark-grayish-blue">
                         {this.props.content}
                     </p>
                 </div>
