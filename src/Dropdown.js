@@ -21,12 +21,12 @@ export default class Dropdown extends React.Component{
 
     render(){
         return (
-            <div>
-                <div>
+            <div className="border pt-2 pb-2 text-very-dark-grayish-blue">
+                <div className="container space-between" onClick={this.toggleDropdown}>
                     <span>
-                        <h3>{this.props.title}</h3>
+                        <h3 className={ `m-0 ${this.state.active ? "bold" : "text-dark normal"}` }>{this.props.title}</h3>
                     </span>
-                    <span onClick={this.toggleDropdown}>
+                    <span>
                         {
                             this.state.active ?
 
@@ -36,7 +36,7 @@ export default class Dropdown extends React.Component{
                     </span>
                 </div>
                 <div className={ this.state.active ? "d-block" : "d-none" }>
-                    <p>
+                    <p className="text-dark-grayish-blue">
                         {this.props.content}
                     </p>
                 </div>
