@@ -6,7 +6,7 @@ export default class App extends React.Component{
 	render(){
 		return (
 			<main className="container flex-column min-height background p-3">
-				<article className="p-2 radius bg-white box-shadow">
+				<article className="w-100 p-2 radius bg-white box-shadow">
 					<div className="w-80" style={{marginTop: "-40%"}}>
 						<Illustration/>
 					</div>
