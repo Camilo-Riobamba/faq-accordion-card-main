@@ -45,6 +45,18 @@ $divider: hsl(240, 5%, 91%);
     transform: rotate(180deg);
 }
 
+.container-illustration{
+    margin-top: -40%;
+
+    @include breakpoint(min, md){
+        margin: 1.5rem 0 1.5rem -12%;
+    }
+}
+
+.cursor-pointer{
+    cursor: pointer;
+}
+
 .background{
     @include linear-gradient(to bottom, hsl(273, 75%, 66%), hsl(240, 73%, 65%));
 }
