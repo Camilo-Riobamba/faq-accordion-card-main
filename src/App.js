@@ -6,16 +6,16 @@ export default class App extends React.Component{
 	render(){
 		return (
 			<main className="container flex-column min-height background p-3">
-				<article className="w-100 p-2 radius bg-white box-shadow">
-					<div className="w-80" style={{marginTop: "-40%"}}>
+				<article className="w-100 p-2 radius bg-white box-shadow text-center">
+					<div className="container" style={{marginTop: "-40%"}}>
 						<Illustration/>
 					</div>
 
-					<div className="mt-4 text-center">
+					<div className="mt-4">
 						<h1 className="bolder">FAQ</h1>
 					</div>
 				
-					<div className="light pl-2 pr-2">
+					<div className="light pl-2 pr-2 text-left">
 						<Dropdown
 							title="How many team members can I invite?"
 							content="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio maxime labore quibusdam ad."

@@ -33,6 +33,10 @@ $divider: hsl(240, 5%, 91%);
     color: #000;
 }
 
+.bg-illustration{
+    background-color: $divider;
+}
+
 .border{
     border-bottom: 1px solid $divider;
 }
